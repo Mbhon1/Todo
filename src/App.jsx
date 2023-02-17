@@ -52,11 +52,10 @@ export default function App() {
     // );
   }
 
-  // TODO function deleteNote(event, noteId) {
-  //   event.stopPropagation();
-  //   const filteredNotes = notes.filter((note) => note.id !== noteId);
-  //   setNotes(filteredNotes);
-  // }
+  function deleteNote(event, noteId) {
+    event.stopPropagation();
+    setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId));
+  }
 
   function findCurrentNote() {
     return (
